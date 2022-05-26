@@ -49,6 +49,8 @@ bar_y_abs_vars=[
 	]
 
 app = dash.Dash()
+server = app.server
+
 app.layout = html.Div([
     dcc.Dropdown(
     id='bar_x_var',
@@ -103,5 +105,5 @@ def update_bar_graph(bar_x_var,bar_y_var):
 	return fig
 
 
-app.run_server(debug=True, use_reloader=True)  # Turn off reloader if inside Jupyter
-
+if __name__ == '__main__':
+	app.run_server(debug=False)
