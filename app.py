@@ -103,5 +103,5 @@ def update_bar_graph(bar_x_var,bar_y_var):
 	return fig
 
 
-app.run_server(debug=True, use_reloader=False)  # Turn off reloader if inside Jupyter
+app.run_server(debug=True, use_reloader=True)  # Turn off reloader if inside Jupyter
 
